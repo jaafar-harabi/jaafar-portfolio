@@ -1,8 +1,8 @@
-name: Deploy Astro to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]   
+    branches: [ main ]
   workflow_dispatch:
 
 permissions:
@@ -10,27 +10,15 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
+      - name: Checkout your repository using git
+        uses: actions/checkout@v5
 
       - name: Install, build, and upload your site
-        uses: withastro/action@v2
-        with:
-          node-version: 20    
+        uses: withastro/action@v5
 
   deploy:
     needs: build
