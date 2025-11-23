@@ -14,77 +14,105 @@ const last_posts = posts.slice(0, 3);
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hey there 👋</div>
+
     <div class="text-5xl font-bold">I'm Jaafar Harabi</div>
+
     <div class="text-3xl py-3 font-bold">
-      Software Engineer and Entrepreneur
+      Cloud &amp; DevOps Engineer · Technical Lead · Full-Stack Developer
     </div>
-    <div class="py-2">
-      <text class="text-lg">
-        ⚡️ Hi, I'm Jaafar Harabi — Cloud & DevOps Engineer | Technical Lead I
-        design and build secure, scalable, and automated cloud platforms using
-        AWS, Kubernetes, Terraform, and DevSecOps practices. With a background
-        in full-stack engineering, I bridge application development with cloud
-        architecture to deliver fast, reliable, and cost-efficient systems. I
-        currently lead cloud & DevOps initiatives at Day Truck. You’ll find my
-        real-world projects, technical articles, and experiments here. 👉 Let’s
-        connect and build something impactful.
-      </text>
+
+    <div class="py-2 max-w-3xl leading-relaxed text-lg">
+      <p class="mb-2">
+        I design and build secure, scalable, and automated cloud platforms using
+        <strong>AWS</strong>, <strong>Kubernetes</strong>, <strong
+          >Terraform</strong
+        >, and modern <strong>DevSecOps</strong> practices.
+      </p>
+      <p class="mb-2">
+        With a strong full-stack background, I bridge application development
+        with cloud architecture to deliver fast, reliable, and cost-efficient
+        systems. I currently lead Cloud &amp; DevOps initiatives at
+        <strong>Day Truck</strong>, working on hybrid (on-prem + cloud)
+        environments, observability, and automation.
+      </p>
+      <p>
+        On this site, you'll find my real-world projects, technical articles,
+        and experiments.
+      </p>
     </div>
+
     <div class="mt-8">
       <a
         class="btn"
         href="https://www.linkedin.com/in/jaafar-harabi/"
         target="_blank"
+        rel="noreferrer"
       >
-        Let's connect!</a
-      >
+        Let's connect!
+      </a>
     </div>
   </div>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
-  </div>
+  <section class="mt-4">
+    <h2 class="text-3xl w-full font-bold mb-4">
+      🚀 Recent Projects {"</>"}
+    </h2>
 
-  <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
+    <HorizontalCard
+      title="DayTruck – Transport & Logistics Platform"
+      img="/post_img.webp"
+      desc="Designed and led a hybrid architecture (on-prem for development and staging, AWS for production) with Infrastructure as Code, multi-stage CI/CD pipelines, observability, and cost-optimized infrastructure for a transport and delivery platform."
+      url="#"
+      badge="NEW"
+    />
+    <div class="divider my-0"></div>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
-  </div>
+    <HorizontalCard
+      title="Mecafix – OCR-Powered Auto Repair Platform"
+      img="/post_img.webp"
+      desc="Built a cloud-hosted management platform with OCR, geolocation, secure chat, and modular APIs using Next.js and Laravel. Deployed on Clever Cloud with automated delivery and performance-focused backend design."
+      url="#"
+    />
+    <div class="divider my-0"></div>
 
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
+    <HorizontalCard
+      title="Freelance Full-Stack Projects (10+ apps)"
+      img="/post_img.webp"
+      desc="Delivered more than ten full-stack applications for clients using React, Laravel, WordPress, and VPS-based hosting—with CI/CD automation, secure deployments, and a focus on availability and maintainability."
+      url="#"
+      badge="FOSS"
+    />
+  </section>
+
+  {/* Blog / Medium */}
+  <section class="mt-10">
+    <h2 class="text-3xl w-full font-bold mb-5">Latest from blog</h2>
+
+    {
+      last_posts.map((post) => (
+        <>
+          <HorizontalCard
+            title={post.data.title}
+            img={post.data.heroImage}
+            desc={post.data.description}
+            url={"/blog/" + createSlug(post.data.title, post.slug)}
+            target="_self"
+            badge={post.data.badge}
+          />
+          <div class="divider my-0" />
+        </>
+      ))
+    }
+
+    <div class="mt-6">
+      <a
+        href="https://medium.com/@jaafar-harabi"
+        target="_blank"
+        rel="noreferrer"
+        class="link"
+      >
+        View more articles on Medium →
+      </a>
+    </div>
+  </section>
 </BaseLayout>
