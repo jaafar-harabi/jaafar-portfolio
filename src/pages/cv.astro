@@ -4,89 +4,240 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
+  {/* Profile */}
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Profile</div>
   </div>
 
-  <div class="mb-10 text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <div class="mb-10 text-justify leading-relaxed max-w-4xl">
+    <p class="mb-3">
+      Cloud &amp; DevOps Engineer with around <strong>2 years</strong> of experience
+      designing secure, scalable, and automated platforms across hybrid and
+      cloud-native environments. I work with <strong>AWS</strong>, <strong>Kubernetes</strong>,
+      <strong> Terraform</strong>, and modern <strong>DevSecOps</strong> practices to build
+      systems that are observable, resilient, and cost-efficient.
+    </p>
+    <p class="mb-3">
+      With roughly <strong>3 years</strong> in full-stack development, I bridge application
+      concerns with cloud architecture—focusing on clean design, automation, and
+      CI/CD so teams can ship faster with confidence. As a Technical Lead at
+      <strong> Day Truck</strong>, I drive cloud, DevOps, and observability initiatives across
+      on-prem and cloud environments.
+    </p>
+    <p>
+      Languages: Arabic (native), French (C1), English (C1), German (B1).
+      Location: Tunisia.
+    </p>
   </div>
 
+  {/* Education */}
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Education</div>
   </div>
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
+      title="Engineering Degree – National Engineering School of Gabes (ENIG)"
+      subtitle="2020 – 2023 · Process Engineering · Gabès, Tunisia"
     />
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
+      title="Preparatory Classes – Higher Institute of Applied Sciences and Technology of Gabes (ISSAT)"
+      subtitle="2018 – 2020 · PC Preparatory Cycle · Gabès, Tunisia"
+    />
+    <TimeLineElement
+      title="Baccalaureate in Experimental Sciences – Erriadh High School"
+      subtitle="2016 · Djerba, Tunisia"
     />
   </div>
 
+  {/* Experience */}
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Experience</div>
   </div>
 
-  <div class="time-line-container mb-10">
+  <div class="time-line-container mb-10 grid gap-4">
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Cloud & DevOps Engineer – Technical Lead · Day Truck"
+      subtitle="May 2024 – Present · Tunisia (On-site)"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <ul class="list-disc ml-4">
+        <li>
+          Designed a hybrid architecture integrating on-prem development/staging
+          with cloud production for flexibility and control.
+        </li>
+        <li>
+          Defined and managed infrastructure using <strong>Terraform</strong> and
+          Infrastructure as Code, ensuring repeatable and auditable changes.
+        </li>
+        <li>
+          Built multi-stage CI/CD pipelines (build, test, staging, production),
+          cutting deployment time by ~<strong>60%</strong> and improving reliability.
+        </li>
+        <li>
+          Implemented observability (metrics, logs, alerts) and proactive
+          monitoring using AWS services and the Elastic stack.
+        </li>
+        <li>
+          Optimized cloud costs through right-sizing, environment separation,
+          and infrastructure tuning.
+        </li>
+      </ul>
     </TimeLineElement>
+
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Full Stack Developer · Vintonet"
+      subtitle="Jan 2024 – Apr 2024 · Tunisia (On-site)"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <ul class="list-disc ml-4">
+        <li>
+          Developed <strong>Mecafix</strong>, an OCR-based platform with geolocation and chat,
+          using <strong>Next.js</strong> and <strong>Laravel</strong>.
+        </li>
+        <li>
+          Deployed the platform on <strong>Clever Cloud</strong> with automated builds and
+          environment configuration.
+        </li>
+        <li>
+          Designed modular and secure APIs, optimized data access patterns, and
+          improved backend performance and security.
+        </li>
+      </ul>
     </TimeLineElement>
+
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Full Stack Developer (Freelance)"
+      subtitle="Jul 2021 – Apr 2024 · Remote"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <ul class="list-disc ml-4">
+        <li>
+          Delivered <strong>10+ end-to-end applications</strong> for clients using React,
+          Laravel, WordPress, and custom stacks.
+        </li>
+        <li>
+          Implemented CI/CD workflows and automated deployments on VPS/Cloud
+          hosts with a focus on security and maintainability.
+        </li>
+        <li>
+          Achieved high availability (~99% uptime) and improved delivery speed
+          through automation and monitoring.
+        </li>
+      </ul>
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Web Developer · Iris Hotel & Thalasso"
+      subtitle="Jul 2021 – Jul 2023 · Tunisia (Remote)"
+    >
+      <ul class="list-disc ml-4">
+        <li>
+          Built and optimized websites using <strong>PHP</strong> and <strong>WordPress</strong>,
+          with a focus on performance, SEO, and content management.
+        </li>
+        <li>
+          Improved user experience, loading times, and search visibility.
+        </li>
+      </ul>
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="End-of-Study Intern · Groupe Chimique Tunisien"
+      subtitle="Feb 2023 – Jun 2023 · Gabès, Tunisia"
+    >
+      <ul class="list-disc ml-4">
+        <li>
+          Completed an end-of-study industrial engineering project, combining
+          technical analysis and process optimization.
+        </li>
+      </ul>
     </TimeLineElement>
   </div>
 
+  {/* Certifications */}
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Certifications</div>
   </div>
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
     <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
+      AWS Certified Solutions Architect – Associate · Amazon Web Services
     </li>
     <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
+      Oracle Cloud Infrastructure 2025 Certified DevOps Professional · Oracle
+    </li>
+    <li>
+      ISO/IEC 27001:2022 Lead Auditor
+    </li>
+    <li>
+      Meta Full-Stack Engineer Certificate · Meta
+    </li>
+    <li>
+      Meta Front-End Developer &amp; Meta Back-End Developer · Meta
+    </li>
+    <li>
+      Google Cybersecurity Specialization &amp; Google IT Support Professional Certificate
+    </li>
+    <li>
+      Microsoft Certified: Azure Fundamentals · AZ-900
+    </li>
+    <li>
+      Microsoft Certified: Security, Compliance, and Identity Fundamentals
+    </li>
+    <li>
+      GitHub Foundations · GitHub
+    </li>
+    <li>
+      Scrum Foundation Professional Certification (SFPC) · CertiProf
+    </li>
+    <li>
+      Six Sigma Yellow Belt · 6sigmastudy
+    </li>
+    <li>
+      EF SET English Certificate · C1 Level
+    </li>
+    <li>
+      ECL German B1 Certificate
     </li>
   </ul>
 
+  {/* Skills */}
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Skills</div>
   </div>
 
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
+  <ul class="list-disc md:columns-3 columns-2 mx-6 mb-8 gap-2">
+    <li><strong>Cloud:</strong> AWS, Azure, GCP, OVHcloud</li>
+    <li><strong>Containers:</strong> Docker, Kubernetes, Helm, ArgoCD</li>
+    <li><strong>IaC &amp; CI/CD:</strong> Terraform, Jenkins, GitLab CI/CD, GitHub Actions, Ansible</li>
+    <li><strong>DevSecOps &amp; Security:</strong> Vault, Trivy, SonarQube, SAST/SCA, secret scanning, IAM, least-privilege</li>
+    <li><strong>Monitoring &amp; Observability:</strong> CloudWatch, Prometheus, Grafana, ELK</li>
+    <li><strong>Languages &amp; Scripting:</strong> Python, Bash, PowerShell, JavaScript/TypeScript, PHP, Java, Go</li>
+    <li><strong>Frameworks:</strong> React, Next.js, Laravel, NestJS, Spring Boot</li>
+    <li><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB</li>
+    <li><strong>Tools:</strong> Linux (Ubuntu, Debian), Git, Jira, Slack</li>
+    <li><strong>Practices:</strong> CI/CD, GitOps, Infrastructure as Code, Cloud-Native Architecture</li>
+  </ul>
+
+  {/* Languages */}
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Languages</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-8 grid gap-1">
+    <li>Arabic – Native or bilingual proficiency</li>
+    <li>French – Full professional proficiency (C1)</li>
+    <li>English – Full professional proficiency (C1)</li>
+    <li>German – Intermediate / B1</li>
+  </ul>
+
+  {/* Interests */}
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Interests</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-1">
+    <li>Chess</li>
+    <li>Reading &amp; technology research</li>
+    <li>Cloud-native architectures &amp; DevOps tooling</li>
+    <li>Security, automation, and observability</li>
   </ul>
 </BaseLayout>
