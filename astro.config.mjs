@@ -5,5 +5,5 @@ import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
   site: 'https://jaafar-harabi.github.io',
-  base: '/astro-portfolio',
+  base: '/jaafar-portfolio',
 });
