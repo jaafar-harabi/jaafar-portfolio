@@ -9,6 +9,8 @@ export interface Props {
 }
 
 const { title, description, image = '/social_img.webp', ogType = 'website' } = Astro.props;
+
+const base = '/jaafar-portfolio';
 ---
 
 <!-- Global Metadata -->
@@ -17,11 +19,31 @@ const { title, description, image = '/social_img.webp', ogType = 'website' } = A
 <meta name="generator" content={Astro.generator} />
 
 <!-- Favicon & Icons -->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<link rel="manifest" href="/site.webmanifest" />
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href={`${base}/apple-touch-icon.png`}
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="96x96"
+  href={`${base}/favicon-96x96.png`}
+/>
+<link
+  rel="icon"
+  type="image/x-icon"
+  href={`${base}/favicon.ico`}
+/>
+<link
+  rel="icon"
+  type="image/svg+xml"
+  href={`${base}/favicon.svg`}
+/>
+<link
+  rel="manifest"
+  href={`${base}/site.webmanifest`}
+/>
 <meta name="theme-color" content="#FF8A00" />
 
 <!-- Primary Meta Tags -->
