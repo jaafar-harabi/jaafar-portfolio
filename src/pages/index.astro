@@ -1,14 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
-import { getCollection } from "astro:content";
-import createSlug from "../lib/createSlug";
-
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
-
-const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
@@ -24,9 +16,8 @@ const last_posts = posts.slice(0, 3);
     <div class="py-2 max-w-3xl leading-relaxed text-lg">
       <p class="mb-2">
         I design and build secure, scalable, and automated cloud platforms using
-        <strong>AWS</strong>, <strong>Kubernetes</strong>, <strong
-          >Terraform</strong
-        >, and modern <strong>DevSecOps</strong> practices.
+        <strong>AWS</strong>, <strong>Kubernetes</strong>, <strong>Terraform</strong>, and
+        modern <strong>DevSecOps</strong> practices.
       </p>
       <p class="mb-2">
         With a strong full-stack background, I bridge application development
@@ -53,6 +44,7 @@ const last_posts = posts.slice(0, 3);
     </div>
   </div>
 
+  {/* Recent Projects */}
   <section class="mt-4">
     <h2 class="text-3xl w-full font-bold mb-4">
       🚀 Recent Projects {"</>"}
@@ -88,21 +80,35 @@ const last_posts = posts.slice(0, 3);
   <section class="mt-10">
     <h2 class="text-3xl w-full font-bold mb-5">Latest from blog</h2>
 
-    {
-      last_posts.map((post) => (
-        <>
-          <HorizontalCard
-            title={post.data.title}
-            img={post.data.heroImage}
-            desc={post.data.description}
-            url={"/blog/" + createSlug(post.data.title, post.slug)}
-            target="_self"
-            badge={post.data.badge}
-          />
-          <div class="divider my-0" />
-        </>
-      ))
-    }
+    <HorizontalCard
+      title="CI/CD: GitHub Actions vs GitLab CI/CD vs Jenkins"
+      img="/social_img.webp"
+      desc="A practical comparison of GitHub Actions, GitLab CI/CD, and Jenkins—focused on real DevOps use cases, trade-offs, and how to choose the right CI/CD engine for your team."
+      url="https://medium.com/p/f79cbb9123f8"
+      target="_blank"
+      badge="Medium"
+    />
+    <div class="divider my-0" />
+
+    <HorizontalCard
+      title="12 Essential Cron Jobs for Production Linux Servers"
+      img="/social_img.webp"
+      desc="A curated set of cron jobs for uptime, backups, security, and observability—ready to plug into production Linux servers with comments and best practices."
+      url="https://medium.com/p/76f15fd323ea"
+      target="_blank"
+      badge="Medium"
+    />
+    <div class="divider my-0" />
+
+    <HorizontalCard
+      title="30 Git Power Moves for DevOps Engineers"
+      img="/social_img.webp"
+      desc="A command-line playbook of 30 high-impact Git techniques—aliases, rebasing, bisect, worktrees, sparse checkouts, and more—for modern DevOps workflows."
+      url="https://medium.com/p/ed68d2674286"
+      target="_blank"
+      badge="Medium"
+    />
+    <div class="divider my-0" />
 
     <div class="mt-6">
       <a
