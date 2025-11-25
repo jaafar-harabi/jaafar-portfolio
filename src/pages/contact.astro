@@ -1,32 +1,54 @@
 ---
-const base = "/jaafar-portfolio";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const sideBarActiveItemID = "contact";
 ---
 
-<section class="p-8 max-w-xl mx-auto">
-  <h1 class="text-3xl font-bold mb-6">Contact Me</h1>
+<BaseLayout title="Contact" sideBarActiveItemID={sideBarActiveItemID}>
+  <div class="text-3xl w-full font-bold mb-5">Contact Me</div>
 
-  <form 
-    action="https://formspree.io/f/your-form-id" 
-    method="POST" 
-    class="flex flex-col gap-4"
+  <p class="mb-6 text-base-content/80 max-w-xl">
+    Feel free to reach out for opportunities, or any technical inquiries.
+  </p>
+
+  <!-- Contact Form -->
+  <form
+    action="https://formspree.io/f/mgvbrpzk"
+    method="POST"
+    class="flex flex-col gap-4 max-w-xl"
   >
     <label class="form-control">
       <span class="label-text">Your Name</span>
-      <input type="text" name="name" class="input input-bordered" required />
+      <input
+        type="text"
+        name="name"
+        class="input input-bordered"
+        required
+      />
     </label>
 
     <label class="form-control">
-      <span class="label-text">Email</span>
-      <input type="email" name="email" class="input input-bordered" required />
+      <span class="label-text">Your Email</span>
+      <input
+        type="email"
+        name="email"
+        class="input input-bordered"
+        required
+      />
     </label>
 
     <label class="form-control">
       <span class="label-text">Message</span>
-      <textarea name="message" rows="5" class="textarea textarea-bordered" required></textarea>
+      <textarea
+        name="message"
+        rows="5"
+        class="textarea textarea-bordered"
+        required
+      ></textarea>
     </label>
 
-    <button class="btn btn-primary mt-4" type="submit">
+    <button class="btn btn-primary mt-4 w-fit" type="submit">
       Send Message
     </button>
   </form>
-</section>
+</BaseLayout>
