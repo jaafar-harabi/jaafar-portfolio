@@ -1,22 +1,52 @@
 ---
 import '../styles/global.css';
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL, BASE_PATH } from '../config';
 
 export interface Props {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   image?: string;
   ogType?: string;
 }
 
-const { title, description, image = '/social_img.webp', ogType = 'website' } = Astro.props;
+const {
+  title = SITE_TITLE,
+  description = SITE_DESCRIPTION,
+  image = '/profile.webp',
+  ogType = 'website',
+} = Astro.props;
 
-const base = '/jaafar-portfolio';
+const currentUrl = Astro.url.toString();
+
+const ogImage = new URL(
+  image.startsWith('http')
+    ? image
+    : `${BASE_PATH}${image.startsWith('/') ? image : `/${image}`}`,
+  SITE_URL,
+).toString();
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Jaafar Harabi',
+  url: SITE_URL,
+  jobTitle: 'DevOps & Full-Stack Engineer',
+  sameAs: [
+    'https://github.com/jaafar-harabi',
+    'https://www.linkedin.com/in/jaafar-harabi/',
+  ],
+};
+
+const base = BASE_PATH;
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="generator" content={Astro.generator} />
+
+<!-- Canonical -->
+<link rel="canonical" href={currentUrl} />
 
 <!-- Favicon & Icons -->
 <link
@@ -53,14 +83,22 @@ const base = '/jaafar-portfolio';
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={ogType} />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:url" content={currentUrl} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={ogImage} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:url" content={currentUrl} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta property="twitter:image" content={ogImage} />
+
+<!-- Robots -->
+<meta name="robots" content="index,follow" />
+
+<!-- JSON-LD Schema -->
+<script type="application/ld+json">
+  {JSON.stringify(jsonLd)}
+</script>
