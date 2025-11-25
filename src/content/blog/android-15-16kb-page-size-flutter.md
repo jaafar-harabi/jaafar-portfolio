@@ -2,7 +2,7 @@
 title: "Fixing the Android 15 16 KB Page Size Error in Flutter — A Complete Hands-On Guide"
 description: "A step-by-step practical guide to solving the new Android 15 16-KB page size crash in Flutter apps, with real commands, fixes, and emulator examples."
 pubDate: 2025-01-20
-updatedDate: 2025-01-20
+updatedDate: "2025-01-20"
 heroImage: "/jaafar-portfolio/provisional.jpg"
 badge: "Medium"
 tags:
