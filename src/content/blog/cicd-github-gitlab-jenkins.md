@@ -2,7 +2,7 @@
 title: "CI/CD: GitHub Actions vs GitLab CI/CD vs Jenkins"
 description: "A practical comparison of GitHub Actions, GitLab CI/CD, and Jenkins—focused on real DevOps use cases, trade-offs, and how to choose the right CI/CD engine for your team."
 pubDate: 2025-01-15
-updatedDate: 2025-01-15
+updatedDate: "2025-01-15"
 heroImage: "/jaafar-portfolio/provisional.jpg"
 badge: "Medium"
 tags:
