@@ -3,49 +3,61 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 ---
 
-<BaseLayout title = "Projects" sideBarActiveItemID="projects">
+<BaseLayout title="Projects" sideBarActiveItemID="projects">
   <div>
-    <div class="text-3xl w-full font-bold mb-5">Projects Header</div>
+    <div class="text-3xl w-full font-bold mb-5">Professional Projects</div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    title="DayTruck – Transport & Logistics Platform"
+    img="/jaafar-portfolio/provisional.jpg"
+    desc="Designed and led a hybrid architecture (on-prem for development and staging, AWS for production) with IaC, CI/CD pipelines, observability, and cost-optimized infrastructure for a transport and delivery platform."
     url="#"
     badge="NEW"
   />
   <div class="divider my-0"></div>
+
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    title="Mecafix – OCR-Powered Auto Repair Platform"
+    img="/jaafar-portfolio/provisional.jpg"
+    desc="Built a cloud-hosted management platform with OCR, geolocation, secure chat, and modular APIs using Next.js and Laravel. Deployed on Clever Cloud with automated delivery and performance-focused backend design."
     url="#"
   />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
-  </div>
+  <div class="divider my-0"></div>
 
   <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    title="Freelance Full-Stack Projects (10+ apps)"
+    img="/jaafar-portfolio/provisional.jpg"
+    desc="Delivered more than ten full-stack applications for clients using React, Laravel, WordPress, and VPS-based hosting—with CI/CD automation, secure deployments, and a focus on availability and maintainability."
     url="#"
     badge="FOSS"
   />
-  <div class="divider my-0"></div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Additional Projects</div>
+  </div>
+
   <HorizontalCard
-    title="Demo Project 4"
+    title="Cloud Infrastructure Automation Toolkit"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    desc="Scripts and tools for automated provisioning, cost monitoring, CI/CD, and infrastructure governance across AWS environments."
+    url="#"
+    badge="DevOps"
+  />
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="Monitoring & Observability Stack"
+    img="/post_img.webp"
+    desc="A modular plug-and-play observability stack based on Prometheus, Grafana, Loki, and Alertmanager. Includes auto-dashboards and autoscaling."
     url="#"
   />
   <div class="divider my-0"></div>
+
   <HorizontalCard
-    title="Demo Project 5"
+    title="Kubernetes Deployment Templates"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    desc="Reusable Helm charts / K8s manifests designed for production clusters, including auto-rollback, HPA, secrets, and graceful deployments."
     url="#"
   />
 </BaseLayout>
