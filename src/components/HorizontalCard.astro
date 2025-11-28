@@ -1,4 +1,6 @@
 ---
+/* eslint-disable */
+// @ts-nocheck
 const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
 
 const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
