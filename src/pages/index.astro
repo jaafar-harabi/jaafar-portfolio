@@ -4,86 +4,116 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug";
 
-// Get latest 3 blog posts
 const allPosts = await getCollection("blog");
 allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const latestPosts = allPosts.slice(0, 3);
+
+const featuredProjects = [
+  {
+    title: "AWS Terraform Infrastructure Blueprint",
+    img: "/provisional.jpg",
+    desc: "Production-ready AWS infrastructure blueprint using Terraform, covering core cloud building blocks such as networking, IAM, storage, and Kubernetes-ready patterns for scalable deployments.",
+    url: "https://github.com/jaafar-harabi/aws-terraform-infra-blueprint",
+    badge: "Featured",
+    target: "_blank",
+  },
+  {
+    title: "Secure Task API (DevSecOps)",
+    img: "/provisional.jpg",
+    desc: "Secure Node.js and TypeScript API with Docker, PostgreSQL, and a DevSecOps-focused delivery pipeline integrating secure build and deployment practices.",
+    url: "https://github.com/jaafar-harabi/secure-task-api-devsecops",
+    badge: "DevSecOps",
+    target: "_blank",
+  },
+  {
+    title: "Spring Boot + React Microservices DevSecOps Demo",
+    img: "/provisional.jpg",
+    desc: "Kubernetes-based microservices platform with CI/CD, security scanning, Helm charts, and observability, built to demonstrate modern platform engineering and cloud-native operations.",
+    url: "https://github.com/jaafar-harabi/springboot-react-microservices-devsecops-demo",
+    badge: "Cloud Native",
+    target: "_blank",
+  },
+];
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
+  <section class="pb-12 mt-5">
+    <p class="text-xl py-1">Hey there 👋</p>
 
-    <div class="text-5xl font-bold">I'm Jaafar Harabi</div>
+    <h1 class="text-5xl font-bold">I'm Jaafar Harabi</h1>
 
-    <div class="text-3xl py-3 font-bold">
-      Cloud &amp; DevOps Engineer · Technical Lead · Full-Stack Developer
-    </div>
+    <p class="text-3xl py-3 font-bold">
+      Cloud &amp; DevOps Engineer · Platform Engineer
+    </p>
 
-    <div class="py-2 max-w-3xl leading-relaxed text-lg">
-      <p class="mb-2">
-        I design and build secure, scalable, and automated cloud platforms using
-        <strong>AWS</strong>, <strong>Kubernetes</strong>, <strong>Terraform</strong>, and
-        modern <strong>DevSecOps</strong> practices.
-      </p>
-      <p class="mb-2">
-        With a strong full-stack background, I bridge application development
-        with cloud architecture to deliver fast, reliable, and cost-efficient
-        systems. I currently lead Cloud &amp; DevOps initiatives at
-        <strong>Day Truck</strong>, working on hybrid (on-prem + cloud)
-        environments, observability, and automation.
-      </p>
+    <div class="py-2 max-w-3xl leading-relaxed text-lg space-y-4">
       <p>
-        On this site, you'll find my real-world projects, technical articles,
-        and experiments.
+        Cloud &amp; DevOps Engineer with 3+ years of experience building and operating
+        cloud-native and hybrid infrastructure across AWS and on-prem environments.
+      </p>
+
+      <p>
+        I design reliable platforms using <strong>AWS</strong>, <strong>Kubernetes</strong>,
+        <strong>Terraform</strong>, and <strong>CI/CD</strong>, with strong attention to
+        security, observability, and cost optimization.
+      </p>
+
+      <p>
+        I currently work on production systems at <strong>Day Truck</strong>, focusing on
+        platform automation, Kubernetes operations, deployment workflows, and monitoring.
       </p>
     </div>
 
-    <div class="mt-8">
+    <div class="mt-8 flex flex-wrap gap-4">
       <a
         class="btn"
         href="https://www.linkedin.com/in/jaafar-harabi/"
         target="_blank"
         rel="noreferrer"
       >
-        Let's connect!
+        Connect on LinkedIn
+      </a>
+
+      <a
+        class="btn btn-outline"
+        href="https://github.com/jaafar-harabi"
+        target="_blank"
+        rel="noreferrer"
+      >
+        View GitHub
+      </a>
+
+      <a
+        class="btn btn-outline"
+        href="/Jaafar-Harabi-Resume.pdf"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Download Resume
       </a>
     </div>
-  </div>
-
-  {/* Recent Projects */}
-  <section class="mt-4">
-    <h2 class="text-3xl w-full font-bold mb-4">
-      🚀 Recent Projects {"</>"}
-    </h2>
-
-    <HorizontalCard
-      title="DayTruck – Transport & Logistics Platform"
-      img="/provisional.jpg"
-      desc="Designed and led a hybrid architecture (on-prem for development and staging, AWS for production) with Infrastructure as Code, multi-stage CI/CD pipelines, observability, and cost-optimized infrastructure for a transport and delivery platform."
-      url="#"
-      badge="NEW"
-    />
-    <div class="divider my-0"></div>
-
-    <HorizontalCard
-      title="Mecafix – OCR-Powered Auto Repair Platform"
-      img="/provisional.jpg"
-      desc="Built a cloud-hosted management platform with OCR, geolocation, secure chat, and modular APIs using Next.js and Laravel. Deployed on Clever Cloud with automated delivery and performance-focused backend design."
-      url="#"
-    />
-    <div class="divider my-0"></div>
-
-    <HorizontalCard
-      title="Freelance Full-Stack Projects (10+ apps)"
-      img="/provisional.jpg"
-      desc="Delivered more than ten full-stack applications for clients using React, Laravel, WordPress, and VPS-based hosting—with CI/CD automation, secure deployments, and a focus on availability and maintainability."
-      url="#"
-      badge="FOSS"
-    />
   </section>
 
-  {/* Blog / Medium (now dynamic) */}
+  <section class="mt-6">
+    <h2 class="text-3xl w-full font-bold mb-4">Featured Projects</h2>
+
+    {
+      featuredProjects.map((project) => (
+        <>
+          <HorizontalCard
+            title={project.title}
+            img={project.img}
+            desc={project.desc}
+            url={project.url}
+            badge={project.badge}
+            target={project.target}
+          />
+          <div class="divider my-0"></div>
+        </>
+      ))
+    }
+  </section>
+
   <section class="mt-10">
     <h2 class="text-3xl w-full font-bold mb-5">Latest from blog</h2>
 
