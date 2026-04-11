@@ -4,9 +4,10 @@ description: "A practical breakdown of how I prepared for and passed the AWS SAA
 pubDate: 2026-03-01
 updatedDate: "2026-03-01"
 heroImage: "/aws-saa.webp"
-badge: "AWS"
+badge: "AWS SAA"
 tags:
   - AWS
+  - SAA-C03
   - Certification
   - Cloud
 externalUrl: "https://medium.com/@jaafar-harabi/how-i-passed-the-aws-solutions-architect-associate-saa-c03-august-2025-2e58a1cacaca"
