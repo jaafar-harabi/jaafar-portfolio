@@ -3,7 +3,7 @@ title: "Top 10 Bash Shell Scripts Every DevOps Engineer Should Automate in 2025"
 description: "A collection of powerful, production-ready Bash automation scripts that every DevOps engineer should master—from backups to monitoring to deployments."
 pubDate: 2025-01-25
 updatedDate: "2025-01-25"
-heroImage: "/jaafar-portfolio/provisional.jpg"
+heroImage: "/provisional.jpg"
 badge: "Medium"
 tags:
   - DevOps
