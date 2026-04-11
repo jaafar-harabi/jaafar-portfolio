@@ -1,6 +1,6 @@
 {
-  "name": "Jaafar",
-  "description": "Welcome to my Personal Portfolio Website built with Astro and TailwindCSS. Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed.",
+  "name": "jaafar-portfolio",
+  "description": "Personal portfolio of Jaafar Harabi, Cloud & DevOps Engineer specializing in AWS, Kubernetes, Terraform, CI/CD, observability, and platform engineering.",
   "type": "module",
   "version": "3.0.0",
   "private": true,
