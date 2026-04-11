@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://jaafarharabi.com/sitemap-index.xml
+Host: jaafarharabi.com

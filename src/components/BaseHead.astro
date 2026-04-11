@@ -1,6 +1,6 @@
 ---
-import '../styles/global.css';
-import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL } from '../config';
+import "../styles/global.css";
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL } from "../config";
 
 export interface Props {
   title?: string;
@@ -12,26 +12,27 @@ export interface Props {
 const {
   title = SITE_TITLE,
   description = SITE_DESCRIPTION,
-  image = '/profile.webp',
-  ogType = 'website',
+  image = "/profile.webp",
+  ogType = "website",
 } = Astro.props;
 
 const currentUrl = Astro.url.toString();
 
-const ogImage = new URL(
-  image.startsWith('http') ? image : image,
-  SITE_URL,
-).toString();
+const ogImage = new URL(image, SITE_URL).toString();
 
 const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Jaafar Harabi',
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Jaafar Harabi",
   url: SITE_URL,
-  jobTitle: 'Cloud & DevOps Engineer',
+  jobTitle: "Cloud & DevOps Engineer",
+  worksFor: {
+    "@type": "Organization",
+    name: "Day Truck",
+  },
   sameAs: [
-    'https://github.com/jaafar-harabi',
-    'https://www.linkedin.com/in/jaafar-harabi/',
+    "https://github.com/jaafar-harabi",
+    "https://www.linkedin.com/in/jaafar-harabi/",
   ],
 };
 ---
