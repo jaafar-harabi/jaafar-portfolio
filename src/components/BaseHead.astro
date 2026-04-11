@@ -30,7 +30,7 @@ const jsonLd = {
   '@type': 'Person',
   name: 'Jaafar Harabi',
   url: SITE_URL,
-  jobTitle: 'DevOps & Full-Stack Engineer',
+  jobTitle: 'Cloud & DevOps Engineer',
   sameAs: [
     'https://github.com/jaafar-harabi',
     'https://www.linkedin.com/in/jaafar-harabi/',
@@ -40,19 +40,28 @@ const jsonLd = {
 const base = BASE_PATH;
 ---
 
-<!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="generator" content={Astro.generator} />
 
-<!-- Canonical -->
 <link rel="canonical" href={currentUrl} />
 
-<!-- Favicon & Icons -->
 <link
   rel="apple-touch-icon"
   sizes="180x180"
   href={`${base}/apple-touch-icon.png`}
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href={`${base}/favicon-32x32.png`}
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href={`${base}/favicon-16x16.png`}
 />
 <link
   rel="icon"
@@ -76,29 +85,24 @@ const base = BASE_PATH;
 />
 <meta name="theme-color" content="#FF8A00" />
 
-<!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
-<!-- Open Graph / Facebook -->
 <meta property="og:type" content={ogType} />
 <meta property="og:url" content={currentUrl} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImage} />
 
-<!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={currentUrl} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={ogImage} />
 
-<!-- Robots -->
 <meta name="robots" content="index,follow" />
 
-<!-- JSON-LD Schema -->
 <script type="application/ld+json">
   {JSON.stringify(jsonLd)}
 </script>
