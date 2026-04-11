@@ -9,9 +9,9 @@ tags:
   - AWS
   - Certification
   - Cloud
-externalUrl: "https://medium.com/@jaafar-harabi/YOUR-AWS-ARTICLE"
+externalUrl: "https://medium.com/@jaafar-harabi/how-i-passed-the-aws-solutions-architect-associate-saa-c03-august-2025-2e58a1cacaca"
 ---
 
 This article is published on Medium.
 
-👉 [Read the full article on Medium](https://medium.com/@jaafar-harabi/YOUR-AWS-ARTICLE)
+👉 [Read the full article on Medium](https://medium.com/@jaafar-harabi/how-i-passed-the-aws-solutions-architect-associate-saa-c03-august-2025-2e58a1cacaca)
