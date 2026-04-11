@@ -1,45 +1,38 @@
 ---
-/* eslint-disable */
-// @ts-nocheck
 const { sideBarActiveItemID } = Astro.props;
 const activeClass = "bg-base-300";
-const base = "/";
 ---
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
   <li>
-    <a class="py-3 text-base" id="home" href={`${base}/`}> Home </a>
+    <a class="py-3 text-base" id="home" href="/">Home</a>
   </li>
 
   <li>
-    <a class="py-3 text-base" id="projects" href={`${base}/projects`}>
-      Projects
-    </a>
-  </li>
-
-  <!-- <li><a class="py-3 text-base" id="services" href={`${base}/services`}>Services</a></li> -->
-
-  <li>
-    <a class="py-3 text-base" id="blog" href={`${base}/blog/`}> Blog </a>
+    <a class="py-3 text-base" id="projects" href="/projects/">Projects</a>
   </li>
 
   <li>
-    <a class="py-3 text-base" id="cv" href={`${base}/cv`}> CV </a>
+    <a class="py-3 text-base" id="blog" href="/blog/">Blog</a>
   </li>
 
   <li>
-    <a class="py-3 text-base" id="contact" href={`${base}/contact`}>
-      Contact
-    </a>
+    <a class="py-3 text-base" id="cv" href="/cv/">CV</a>
+  </li>
+
+  <li>
+    <a class="py-3 text-base" id="contact" href="/contact/">Contact</a>
   </li>
 </ul>
 
 <script
   define:vars={{
-    sideBarActiveItemID: sideBarActiveItemID,
-    activeClass: activeClass,
+    sideBarActiveItemID,
+    activeClass,
   }}
 >
   const activeItemElem = document.getElementById(sideBarActiveItemID);
-  activeItemElem && activeItemElem.classList.add(activeClass);
+  if (activeItemElem) {
+    activeItemElem.classList.add(activeClass);
+  }
 </script>
