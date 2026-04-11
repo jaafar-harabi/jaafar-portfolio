@@ -4,5 +4,5 @@ export const SITE_DESCRIPTION =
 export const GENERATE_SLUG_FROM_TITLE = true;
 export const TRANSITION_API = true;
 
-export const SITE_URL = 'https://jaafar-harabi.github.io/jaafar-portfolio';
-export const BASE_PATH = '/jaafar-portfolio';
+export const SITE_URL = 'https://jaafarharabi.com';
+export const BASE_PATH = '/';
