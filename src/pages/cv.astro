@@ -4,7 +4,6 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
-
   {/* Profile */}
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Profile</div>
@@ -22,8 +21,8 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       DevSecOps, and cost optimization.
     </p>
     <p>
-      I enjoy working on production systems, automating workflows, and improving how
-      teams deploy and operate applications efficiently.
+      I enjoy working on production systems, automating workflows, and improving
+      how teams deploy and operate applications efficiently.
     </p>
   </div>
 
@@ -33,23 +32,54 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="time-line-container mb-10 grid gap-4">
+    <TimeLineElement
+      title="Cloud & DevOps Engineer · Enquire AI"
+      subtitle="Apr 2026 – Present · Tunisia"
+    >
+      <ul class="list-disc ml-4">
+        <li>
+          Working on AWS infrastructure discovery, Kubernetes operations, and
+          SOC 2 oriented security improvements.
+        </li>
+        <li>
+          Auditing cloud infrastructure, IAM configurations, monitoring systems,
+          and networking posture.
+        </li>
+      </ul>
+    </TimeLineElement>
 
     <TimeLineElement
       title="Cloud & DevOps Engineer · Day Truck"
-      subtitle="May 2024 – Present · Tunisia"
+      subtitle="May 2024 – Apr 2026 · Tunisia"
     >
       <ul class="list-disc ml-4">
-        <li>Designed and deployed hybrid infrastructure (AWS + on-prem) for production systems.</li>
-        <li>Automated infrastructure provisioning using <strong>Terraform</strong>, reducing setup time by ~60%.</li>
-        <li>Managed Kubernetes workloads across environments (on-prem + EKS).</li>
-        <li>Built CI/CD pipelines, reducing deployment time from hours to minutes and lowering incidents by ~25%.</li>
         <li>
-          Implemented observability stack:
-          Prometheus, Grafana, Loki, OpenTelemetry (on-prem) and AWS CloudWatch + X-Ray (EKS).
+          Designed and deployed hybrid infrastructure (AWS + on-prem) for
+          production systems.
         </li>
-        <li>Improved detection time by ~40% and increased security coverage ×3.</li>
+        <li>
+          Automated infrastructure provisioning using <strong>Terraform</strong
+          >, reducing setup time by ~60%.
+        </li>
+        <li>
+          Managed Kubernetes workloads across environments (on-prem + EKS).
+        </li>
+        <li>
+          Built CI/CD pipelines, reducing deployment time from hours to minutes
+          and lowering incidents by ~25%.
+        </li>
+        <li>
+          Implemented observability stack: Prometheus, Grafana, Loki,
+          OpenTelemetry (on-prem) and AWS CloudWatch + X-Ray (EKS).
+        </li>
+        <li>
+          Improved detection time by ~40% and increased security coverage ×3.
+        </li>
         <li>Optimized cloud usage, reducing infrastructure costs by ~15%.</li>
-        <li>Integrated Redis and Kafka to improve system performance and resilience.</li>
+        <li>
+          Integrated Redis and Kafka to improve system performance and
+          resilience.
+        </li>
       </ul>
     </TimeLineElement>
 
@@ -58,7 +88,10 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       subtitle="Jan 2024 – Apr 2024 · Tunisia"
     >
       <ul class="list-disc ml-4">
-        <li>Developed Mecafix, a SaaS platform with OCR, geolocation, and chat features.</li>
+        <li>
+          Developed Mecafix, a SaaS platform with OCR, geolocation, and chat
+          features.
+        </li>
         <li>Deployed and managed the application in a cloud environment.</li>
         <li>Applied CI/CD practices to streamline delivery workflows.</li>
         <li>Improved backend performance and API security (~20% faster).</li>
@@ -71,8 +104,12 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     >
       <ul class="list-disc ml-4">
         <li>Delivered <strong>10+ web applications</strong> end-to-end.</li>
-        <li>Managed full lifecycle: development, deployment, and maintenance.</li>
-        <li>Deployed applications on VPS/cloud environments with CI/CD workflows.</li>
+        <li>
+          Managed full lifecycle: development, deployment, and maintenance.
+        </li>
+        <li>
+          Deployed applications on VPS/cloud environments with CI/CD workflows.
+        </li>
         <li>Improved performance and SEO, increasing traffic by 20–25%.</li>
       </ul>
     </TimeLineElement>
@@ -82,11 +119,13 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       subtitle="Jul 2021 – Jul 2023 · Tunisia"
     >
       <ul class="list-disc ml-4">
-        <li>Developed and maintained websites with focus on usability and performance.</li>
+        <li>
+          Developed and maintained websites with focus on usability and
+          performance.
+        </li>
         <li>Improved online presence and user experience.</li>
       </ul>
     </TimeLineElement>
-
   </div>
 
   {/* Projects */}
@@ -126,13 +165,26 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <ul class="list-disc md:columns-3 columns-2 mx-6 mb-8 gap-2">
     <li><strong>Cloud:</strong> AWS, Azure, GCP</li>
     <li><strong>Containers:</strong> Docker, Kubernetes, Helm</li>
-    <li><strong>CI/CD & GitOps:</strong> Jenkins, GitLab CI/CD, GitHub Actions, Argo CD</li>
+    <li>
+      <strong>CI/CD & GitOps:</strong> Jenkins, GitLab CI/CD, GitHub Actions, Argo
+      CD
+    </li>
     <li><strong>Infrastructure as Code:</strong> Terraform, Ansible</li>
-    <li><strong>Security (DevSecOps):</strong> Trivy, SonarQube, OWASP ZAP, Vault, IAM</li>
-    <li><strong>Observability:</strong> Prometheus, Grafana, Loki, OpenTelemetry, CloudWatch</li>
-    <li><strong>Networking:</strong> VPC, Load Balancers, Security Groups, DNS, VPN</li>
-    <li><strong>Programming:</strong> Python, Bash, Go, JavaScript/TypeScript</li>
-    <li><strong>Databases:</strong> PostgreSQL, MySQL, MongoDB, Redis, Kafka</li>
+    <li>
+      <strong>Security (DevSecOps):</strong> Trivy, SonarQube, OWASP ZAP, Vault, IAM
+    </li>
+    <li>
+      <strong>Observability:</strong> Prometheus, Grafana, Loki, OpenTelemetry, CloudWatch
+    </li>
+    <li>
+      <strong>Networking:</strong> VPC, Load Balancers, Security Groups, DNS, VPN
+    </li>
+    <li>
+      <strong>Programming:</strong> Python, Bash, Go, JavaScript/TypeScript
+    </li>
+    <li>
+      <strong>Databases:</strong> PostgreSQL, MySQL, MongoDB, Redis, Kafka
+    </li>
   </ul>
 
   {/* Education */}
@@ -169,5 +221,4 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <li>Technology Research</li>
     <li>Systems Optimization</li>
   </ul>
-
 </BaseLayout>
